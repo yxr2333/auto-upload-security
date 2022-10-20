@@ -1,0 +1,6 @@
+url =
+user =
+pass =
+showSql = false
+formatSql = true
+showParams = true

@@ -1,0 +1,6 @@
+#执行的类或对象方法所在的包的名字
+[com.clevesheep.security.cron]
+
+#需要执行的类名和方法
+#每1分钟执行一次
+AutoSubmitCronTask.submit = 0 00 6 ? * *

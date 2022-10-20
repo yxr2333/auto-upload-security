@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-image: url("https://img-blog.csdnimg.cn/20191220175048131.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDE5NjY1MQ==,size_16,color_FFFFFF,t_70");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left top;
+}
+.box
+{
+    width:400px;
+    padding: 40px;
+    background:rgba(0,0,0,.8);
+    box-sizing:border-box;
+    box-shadow:0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;/*登录窗口边角圆滑*/
+}
+.box h4{
+    color:#fff;
+    text-align: right;
+}
+.box h2
+{
+    margin:0 0 30px;
+    padding:0;
+    color:#fff;
+    text-align:center;
+}
+.box .inputBox
+{
+    position:relative;
+}
+.box .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-side:16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom:30px;/*输入框设置*/
+    border:none;
+    border-bottom:1px solid #fff;
+    outline:none;
+    background:transparent;
+}
+.box .inputBox label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+.box  button[type="button"]
+{
+    width: 320px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #4e6ef2;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.box  button[type="button"]:focus
+{
+    background-color: #4662d9;
+}
+.box  button[type="button"]:hover
+{
+    background-color: #4662d9;
+}

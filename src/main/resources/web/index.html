@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ssssheep</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+<div class="box">
+    <h2>CTGU疫情自动安全上报</h2>
+    <h4>by sssheep</h4>
+    <form name="form" id="form">
+        <div class="inputBox">
+            <input type="text" name="username" required="required" id="number">
+            <label>学号</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" name="password" required="required" id="password">
+            <label>密码</label>
+        </div>
+        <button type="button" id="btn">立即上报</button>
+    </form>
+</div>
+</body>
+<script src="./jquery.min.js"></script>
+<script type="text/javascript">
+    let name = $('#number').val();
+    let password = $('#password').val();
+
+    document.getElementById("btn").onclick = function (){
+        $.ajax({
+            url: 'http://localhost:8888/submit',
+            type: 'POST',
+            data: $('form').serialize(),
+            timeout: 30000,
+            success: function (res){
+                alert(res.toString());
+                document.getElementById('form').reset();
+            },
+            error: function (err){
+                alert(err);
+            }
+        })
+    }
+</script>
+</html>
